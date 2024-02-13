@@ -4,11 +4,11 @@ public class PalindromeChecker {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        String tastatuleeConflict = scanner.nextLine();
+        // Inputmaster muutos
+        String inputmaster = scanner.nextLine();
 
-        String transformed = transformInput(tastatuleeConflict);
+        String transformed = transformInput(inputmaster);
 
-        // Check if the transformed input is a palindrome
         boolean isPalindrome = checkPalindrome(transformed);
         if (isPalindrome) {
             System.out.println("The transformed input is a palindrome.");
