@@ -4,10 +4,11 @@ public class PalindromeChecker {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
+        String tastatuleeConflict = scanner.nextLine();
 
-        String transformed = transformInput(input);
+        String transformed = transformInput(tastatuleeConflict);
 
+        // Check if the transformed input is a palindrome
         boolean isPalindrome = checkPalindrome(transformed);
         if (isPalindrome) {
             System.out.println("The transformed input is a palindrome.");
@@ -16,6 +17,7 @@ public class PalindromeChecker {
         }
     }
 
+    // Transform the input to lowercase and remove all punctuation
     public static String transformInput(String input) {
         input = input.toLowerCase();
         input = input.replace(",", "");
@@ -23,6 +25,7 @@ public class PalindromeChecker {
         return input;
     }
 
+    // Check if the input is a palindrome
     public static boolean checkPalindrome(String input) {
         String reversed = reverseString(input);
         if (input.equals(reversed)) {
