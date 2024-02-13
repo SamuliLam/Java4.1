@@ -4,9 +4,10 @@ public class PalindromeChecker {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
+        // Inputmaster muutos
+        String inputmaster = scanner.nextLine();
 
-        String transformed = transformInput(input);
+        String transformed = transformInput(inputmaster);
 
         boolean isPalindrome = checkPalindrome(transformed);
         if (isPalindrome) {
